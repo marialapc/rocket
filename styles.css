@@ -1,160 +1,159 @@
-
-
 body {
   background-color: black;
-    background-size:contain;
-    color: #fff;  
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  .game-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    touch-action: none;
-    -webkit-user-select: none;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  .gameboy {
-    position: relative;
-    display: block;
-    margin: 20px auto;
-    width: calc(422px * 0.85);
-    height: calc(697px * 0.85);
-    background: #EEE;
-    border-radius: 10px 10px 60px 10px;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
-  
-  }
-  
-  .gameboy:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 31px;
-    border-bottom: 4px solid #c2c1c1;
-  }
-  
-  .gameboy:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: calc(334px * 0.85);
-    height: calc(31px * 0.85);
-    border-left: 4px solid #c2c1c1;
-    border-right: 4px solid #c2c1c1;
-    margin-left: calc(40px * 0.85);
-    margin-right: calc(40px * 0.85);
-  }
-  
-  canvas {
-    border: 15px solid #02eea3;
-    border-radius: 8px;
-    background-image: url('./icons/background3.jpg');
+  background-size: contain;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  touch-action: none;
+  -webkit-user-select: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gameboy {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  width: calc(422px * 0.85);
+  height: calc(697px * 0.85);
+  background: #EEE;
+  border-radius: 10px 10px 60px 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.gameboy:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 31px;
+  border-bottom: 4px solid #c2c1c1;
+}
+
+.gameboy:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: calc(334px * 0.85);
+  height: calc(31px * 0.85);
+  border-left: 4px solid #c2c1c1;
+  border-right: 4px solid #c2c1c1;
+  margin-left: calc(40px * 0.85);
+  margin-right: calc(40px * 0.85);
+}
+
+canvas {
+  border: 15px solid #02eea3;
+  border-radius: 8px;
+  background-image: url('./icons/background3.jpg');
   width: 79%;
   position: relative;
   top: 7%;
-  }
+}
 
-  .btns {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 100%;
-    margin-right: 180px;
-   margin-top: 25px;
-  }
-  
-  button {
-    background-color: #313131;
-    border-radius: 8px;
-    border-color: #151515;
-    font-family: inherit;
-    margin: 0;
-    padding: 6px 6px;
-    }
+.btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  margin-right: 180px;
+  margin-top: 25px;
+}
 
-  .arrowUp{
-    height: 20px;
-    width: 25px;
-  }
-  .arrowLeft{
-    height: 20px;
-    width: 25px;
-  }
-  
-  .arrowRight{
-    height: 20px;
-    width: 25px;
-  }
+button {
+  background-color: #313131;
+  border-radius: 8px;
+  border-color: #151515;
+  font-family: inherit;
+  margin: 0;
+  padding: 6px 6px;
+}
 
-  .arrowDown{
-    height: 20px;
-    width: 25px;
-  }
-  
-  .btn-AB {
-    position: absolute;
-    top: 410px;
-    left: 200px;
-    width: 110px;
-    height: 50px;
-    background: #d4d3d3;
-    border-radius: 30px;
-    transform: rotate(-25deg);
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    flex-direction: center;
-  }
-  .btnA{
-    background-color: #02eea3;
-    border-color:#00ffae;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-  }
-  .btnB{
-    background-color: #02eea3;
-    border-color:#00ffae;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-  }
+.arrowUp {
+  height: 20px;
+  width: 25px;
+}
 
-  .restartText{
-    font-size: 8px;
-    margin-top: 90px;
-    display: block;
-    margin-left: 110px;
-    transform: rotate(-20deg);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight:900;
-    color: rgb(27, 27, 27);
-    
-  }
+.arrowLeft {
+  height: 20px;
+  width: 25px;
+}
 
+.arrowRight {
+  height: 20px;
+  width: 25px;
+}
 
-  .pauseText{
-    font-size: 8px;
-    margin-top: 55px;
-    display: block;
-    margin-left: 10px;
-    transform: rotate(-20deg);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight:900;
-    color: rgb(27, 27, 27);
-    
-  }
+.arrowDown {
+  height: 20px;
+  width: 25px;
+}
 
- .speakers{
+.btn-AB {
+  position: absolute;
+  top: 410px;
+  left: 200px;
+  width: 110px;
+  height: 50px;
+  background: #d4d3d3;
+  border-radius: 30px;
+  transform: rotate(-25deg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: center;
+}
+
+.btnA {
+  background-color: #02eea3;
+  border-color: #00ffae;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.btnB {
+  background-color: #02eea3;
+  border-color: #00ffae;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+
+.restartText {
+  font-size: 8px;
+  margin-top: 90px;
+  display: block;
+  margin-left: 110px;
+  transform: rotate(-20deg);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  color: rgb(27, 27, 27);
+}
+
+.pauseText {
+  font-size: 8px;
+  margin-top: 55px;
+  display: block;
+  margin-left: 10px;
+  transform: rotate(-20deg);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+  color: rgb(27, 27, 27);
+}
+
+.speakers {
   content: "";
   position: relative;
   height: 40px;
@@ -166,9 +165,9 @@ body {
   border-radius: 4px;
   transform: rotate(-25deg);
   box-shadow: 15px 0 #c2c1c1, 30px 0 #c2c1c1, 45px 0 #c2c1c1, 60px 0 #c2c1c1;
- }
-  
-.fakeBtn{
+}
+
+.fakeBtn {
   content: "";
   position: relative;
   height: 30px;
@@ -178,10 +177,10 @@ body {
   background: #434141;
   border-radius: 4px;
   transform: rotate(-110deg);
-  box-shadow: 15px 0 #c2c1c1, 30px 0 #c2c1c1, 
-
+  box-shadow: 15px 0 #c2c1c1, 30px 0 #c2c1c1,
 }
-.fakeBtn2{
+
+.fakeBtn2 {
   content: "";
   position: relative;
   height: 30px;
@@ -191,14 +190,13 @@ body {
   background: #434141;
   border-radius: 4px;
   transform: rotate(-110deg);
-  box-shadow: 15px 0 #c2c1c1, 30px 0 #c2c1c1, 
-
+  box-shadow: 15px 0 #c2c1c1, 30px 0 #c2c1c1,
 }
 
-.messages{
+.messages {
   margin-top: 20px;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 45px;
@@ -208,29 +206,29 @@ body {
   margin-bottom: 5px;
 }
 
-
-.record{
+.record {
   font-family: 'Press Start 2p', cursive;
-font-weight: 100;
-margin-left: 20px;
-margin-top: 20px;
-font-size: 12px;
-margin-bottom: 0px;
+  font-weight: 100;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-bottom: 0px;
 }
-.time{
+
+.time {
   font-family: 'Press Start 2p', cursive;
   font-size: 12px;
-  font-weight:lighter;
+  font-weight: lighter;
   height: 12px;
 }
 
-.result{
+.result {
   font-family: 'Press Start 2p', cursive;
   font-size: 10px;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 
-.brand{
+.brand {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -239,22 +237,29 @@ margin-bottom: 0px;
   margin-right: 45px;
   height: 12px;
   margin-top: 50px;
-
 }
-.brandname{
+
+.brandname {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight:900;
+  font-weight: 900;
   font-size: 12px;
   color: rgb(27, 27, 27);
-
 }
 
-.rocket{
+.rocket {
   height: 12px;
   width: 12px;
 }
-  
-  @media (max-width: 2020px) {
-    button { margin-right: 15px; margin-left: 15px; }
-    #up, #down { margin-left: 100%; margin-right: 100%; }
+
+@media (max-width: 2020px) {
+  button {
+    margin-right: 15px;
+    margin-left: 15px;
   }
+
+  #up,
+  #down {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+}
