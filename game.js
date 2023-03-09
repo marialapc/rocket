@@ -146,7 +146,6 @@ function movePlayer(){
    levelFail();
       }
      
-
   game.fillText(emojis['PLAYER'], playerPosition.x, playerPosition.y);
 }
 function levelWin(){
